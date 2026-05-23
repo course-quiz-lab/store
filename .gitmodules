@@ -1,0 +1,3 @@
+[submodule "banks-hfut"]
+	path = banks-hfut
+	url = https://github.com/course-quiz-lab/banks-hfut.git
