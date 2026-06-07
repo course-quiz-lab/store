@@ -1,3 +1,6 @@
 [submodule "banks-hfut"]
 	path = banks-hfut
 	url = https://github.com/course-quiz-lab/banks-hfut.git
+[submodule "banks-universe"]
+	path = banks-universe
+	url = https://github.com/course-quiz-lab/banks-universe.git

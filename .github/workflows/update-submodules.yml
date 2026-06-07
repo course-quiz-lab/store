@@ -1,0 +1,27 @@
+name: Update Submodules
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-submodules:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v6
+        with:
+          submodules: recursive
+
+      - name: Update submodules to latest remote commits
+        run: |
+          git submodule update --init --recursive --remote
+
+      - name: Auto commit submodule updates
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "🚀 update submodules to latest commits"
+          commit_user_name: "github-actions[bot]"
+          commit_user_email: "github-actions[bot]@users.noreply.github.com"
